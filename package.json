@@ -1,0 +1,33 @@
+{
+  "name": "vstorm_nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "nodejs",
+    "react"
+  ],
+  "homepage": "https://github.com/BaoVStorm/Learn_N-deJS_HocDanIT#readme",
+  "bugs": {
+    "url": "https://github.com/BaoVStorm/Learn_N-deJS_HocDanIT/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BaoVStorm/Learn_N-deJS_HocDanIT.git"
+  },
+  "license": "ISC",
+  "author": "vstorm",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "3.1.8",
+    "express": "4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
