@@ -11,6 +11,10 @@ const app = express();
 const port = process.env.PORT || 8080;
 const hostname = process.env.HOST_NAME || 'localhost';
 
+//config req.body
+app.use(express.json()) // for json
+app.use(express.urlencoded({ extended: true })) // for form data
+
 // config template engine (EJS)
 configViewEngine(app);
 

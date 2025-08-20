@@ -10,4 +10,9 @@ const getABC = (req, res) => {
     res.send('abc')
 }
 
-module.exports = {getHomepage, getSample, getABC};
+const postCreateUser = (req, res) => {
+    console.log(req.body);
+    res.send('create a new user');
+}
+
+module.exports = {getHomepage, getSample, getABC, postCreateUser};
