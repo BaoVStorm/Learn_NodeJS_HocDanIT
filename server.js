@@ -4,6 +4,8 @@ const path = require('path');
 const configViewEngine = require("./src/config/viewEngine");
 // route
 const webRoutes = require('./src/routes/web');
+// config connection database
+const connection = require('./src/config/database');
 
 const app = express();
 const port = process.env.PORT || 8080;
@@ -16,23 +18,12 @@ configViewEngine(app);
 app.use('/', webRoutes);
 app.use('/v2', webRoutes);
 
-// test connection
-const mysql = require('mysql2');
-
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '123456',
-    database: 'vstorm',
-    port: 3307, // default: 3306
-});
-
 // simple query
 connection.query(
     'SELECT * FROM Users',
     function (err, results, fields) {
         console.log(">>> results: ", results); 
-        console.log(">>> fields: ", fields); 
+        // console.log(">>> fields: ", fields); 
     }
 );
 
